@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_hint"
+    android:layout_height="match_parent"
+    tools:context="com.dmtec.a91jiasu.views.activities.ProblemsActivity">
+
+    <include android:id="@+id/toolbar" layout="@layout/title_bar"/>
+    <LinearLayout
+        android:id="@+id/how_to_use"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/pay_item_bg"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/q" />
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="如何使用加速功能"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/go" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/fail_to_connect"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/pay_item_bg"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/q" />
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="加速服务启动失败"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/go" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/stop_kill"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/pay_item_bg"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/q" />
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="锁屏后加速被停止"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/go" />
+    </LinearLayout>
+
+</LinearLayout>

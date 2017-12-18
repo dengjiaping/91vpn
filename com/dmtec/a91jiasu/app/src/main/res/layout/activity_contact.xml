@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/title_bar"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:background="@color/light_hint"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/earphone" />
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/light_hint" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_height="25dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    android:text="@string/contact_phone"
+                    android:layout_width="match_parent"/>
+                <TextView
+                    android:id="@+id/tv_phone_num"
+                    android:layout_height="25dp"
+                    android:textSize="@dimen/text_size"
+                    android:text="4008008088"
+                    android:layout_width="match_parent"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/call_action"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/call" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/qq" />
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/light_hint" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_height="25dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    android:text="@string/contact_qq"
+                    android:layout_width="match_parent"/>
+                <TextView
+                    android:id="@+id/tv_contact_qq"
+                    android:layout_height="25dp"
+                    android:textSize="@dimen/text_size"
+                    android:text="2301545830"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/qq_action"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/add" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/hint"
+            android:textSize="@dimen/hint_size"
+            android:text="@string/contact_info"
+            />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

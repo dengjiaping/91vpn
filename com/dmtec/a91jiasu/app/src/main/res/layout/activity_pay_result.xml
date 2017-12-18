@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dmtec.a91jiasu.views.activities.PayResultActivity">
+
+    <include android:id="@+id/pay_result_title" layout="@layout/title_bar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:layout_height="0dp"
+        />
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+        >
+        <ImageView
+            android:id="@+id/result_img"
+            android:layout_weight="5"
+            android:src="@drawable/pay_fail"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_height="0dp" />
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:id="@+id/result_title"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_width="match_parent"
+            android:text="订单支付失败"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:textSize="16sp"
+            android:textColor="@color/hint"
+            android:id="@+id/result_hint"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_width="match_parent"
+            android:text="请稍后尝试支付"/>
+        <Button
+            style="@style/RoundPrimaryBtnTheme"
+            android:layout_width="wrap_content"
+            android:text="知道了"
+            android:background="@drawable/round_primary_btn_bg"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/result_btn"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="5"
+        android:layout_height="0dp"
+        />
+</LinearLayout>

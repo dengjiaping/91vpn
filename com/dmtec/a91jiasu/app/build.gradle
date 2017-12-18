@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+
+    defaultConfig {
+        applicationId "com.dmtec.a91jiasu"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 11
+        versionName "1.7"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "com.dmtec.a91jiasu",
+                JPUSH_APPKEY : "ca7cabba8484b26830955d76", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    sourceSets.main {
+        jni.srcDirs = [] // disables the default ndk-build call (with on-the-fly Android.mk files)
+        jniLibs.srcDir 'src/main/libs'
+    }
+
+
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    }
+
+//    clean.dependsOn 'cleanNative'
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file('91jiasu.jks')
+            storePassword "Zaq1xsw2110"
+            keyAlias "key0"
+            keyPassword "Zaq1xsw2110"
+        }
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('src/main/libs/alipaySdk-20170725.jar')
+    compile files('src/main/libs/open_sdk_r5788_lite.jar')
+    compile files('src/main/libs/SocialSDK_QQ_Full.jar')
+    compile files('src/main/libs/SocialSDK_Sina_Full.jar')
+    compile files('src/main/libs/SocialSDK_WeiXin_Full.jar')
+    compile files('src/main/libs/umeng_social_api.jar')
+    compile files('src/main/libs/umeng_social_net.jar')
+    compile files('src/main/libs/umeng_social_tool.jar')
+    compile files('src/main/libs/wechat-sdk-android-with-mta-1.1.6.jar')
+    compile files('src/main/libs/weiboSDKCore.jar')
+    compile files('src/main/libs/umeng_shareboard_widget.jar')
+    compile files('src/main/libs/umeng_social_shareboard.jar')
+    // 此处以JPush 3.0.9 版本为例。
+
+    // 此处以JCore 1.1.7 版本为例。
+    compile project(':IMKit')
+    compile files('src/main/libs/MiPush_SDK_Client_3_2_2.jar')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-vector-drawable:25.3.1'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.8'
+    compile 'com.github.GrenderG:Toasty:1.2.5'
+    compile 'com.trycatch.android:mysnackbar:1.2.2'
+    compile 'cn.jiguang.sdk:jpush:3.0.9'
+    compile 'cn.jiguang.sdk:jcore:1.1.7'
+    testCompile 'junit:junit:4.12'
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.dmtec.a91jiasu.views.activities.WebActivity">
+
+    <include android:id="@+id/toolbar" layout="@layout/title_bar"/>
+    <ProgressBar
+        android:id="@+id/pb_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:progressDrawable="@drawable/progress_bar_states" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="正在跳转支付..."
+        android:id="@+id/web_hint"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:id="@+id/web_loading">
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gif_view"
+            android:layout_width="190dp"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_height="190dp"
+            android:src="@drawable/web_loader"
+            />
+    </LinearLayout>
+    <android.webkit.WebView
+        android:layout_width="match_parent"
+        android:id="@+id/webview"
+        android:layout_height="match_parent">
+
+    </android.webkit.WebView>
+
+</LinearLayout>

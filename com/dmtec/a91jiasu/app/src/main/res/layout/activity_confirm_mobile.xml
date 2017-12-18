@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_hint"
+    android:layout_width="match_parent"
+    >
+
+    <include android:id="@+id/toolbar" layout="@layout/title_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="34dp"-->
+            <!--android:background="@drawable/info_bg"-->
+            <!--android:gravity="center_horizontal">-->
+            <!--<ImageView-->
+                <!--android:layout_height="14dp"-->
+                <!--android:layout_width="14dp"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_marginRight="4dp"-->
+                <!--android:src="@drawable/info"/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:textSize="14sp"-->
+                <!--android:textColor="@color/primary_btn_pressed"-->
+                <!--android:text="@string/forget_username"/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:textSize="14sp"-->
+                <!--android:id="@+id/contact_text_view"-->
+                <!--android:textColor="@color/primary_btn_pressed"-->
+                <!--android:text="点击联系客服"/>-->
+        <!--</LinearLayout>-->
+        <FrameLayout
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/edit_text_gap"
+            android:layout_width="match_parent">
+            <EditText
+                style="@style/EditTextTheme"
+                android:hint="@string/input_mobile"
+                android:id="@+id/register_ed_username"/>
+            <ImageView
+                style="@style/EditTextIconTheme"
+                android:src="@drawable/phone"/>
+            <Button
+                android:id="@+id/button"
+                style="@style/SmallBtnTheme"
+                android:layout_gravity="end|center_vertical"
+                android:text="@string/get_code"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/small_btn_bg"
+                android:layout_width="64dp"
+                android:layout_height="30dp" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/edit_text_gap"
+            android:layout_width="match_parent">
+            <EditText
+                style="@style/EditTextTheme"
+                android:hint="@string/input_reg_code_hint"
+                android:inputType="number"
+                android:id="@+id/register_ed_code"/>
+            <ImageView
+                style="@style/EditTextIconTheme"
+                android:src="@drawable/code"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <Button
+        style="@style/RoundPrimaryBtnTheme"
+        android:text="@string/submit"
+        android:layout_marginTop="@dimen/logo_margin_top"
+        android:background="@drawable/primary_btn_bg"
+        android:id="@+id/set_new_pwd"/>
+
+
+</LinearLayout>

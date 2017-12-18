@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/light_hint"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:layout_height="@dimen/toolbar_height">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/user"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_size" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/user_bg"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/userdef" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:id="@+id/user_account"
+                    android:textSize="@dimen/text_size"
+                    android:layout_marginBottom="2sp"
+                    android:text="@string/user_mobile"/>
+            <TextView
+                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:id="@+id/user_exdate"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/white"
+                android:text="@string/expire_info"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sys_msg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/pay_item_bg"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/sys_msg" />
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/sys_msg"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/go" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reset_pwd_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/pay_item_bg"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/setting" />
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/change_pwd"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/go" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view_website_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/pay_item_bg"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/web" />
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/go_website"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/go" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/share_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:visibility="gone"
+        android:background="@drawable/pay_item_bg"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/share" />
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/share_to_friends"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/go" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/questions"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/pay_item_bg"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/q_a" />
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/questions"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/go" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/exit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/pay_item_bg"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/exit" />
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/exit_user"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/go" />
+    </LinearLayout>
+
+</LinearLayout>

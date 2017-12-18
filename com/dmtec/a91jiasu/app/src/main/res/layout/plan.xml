@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginTop="5dp"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_height="20dp"
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="3个月高速线路套餐"/>
+        <TextView
+            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10sp"
+            android:id="@+id/desc"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:text="￥12.5/月"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="10sp"
+        android:gravity="center_vertical"
+        android:id="@+id/cost"
+        android:textColor="@color/black"
+        android:text="@string/price"/>
+</LinearLayout>

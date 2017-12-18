@@ -1,0 +1,4 @@
+#scss middle files
+*.log
+/.project
+/.buildpath
